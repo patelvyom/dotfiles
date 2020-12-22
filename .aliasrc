@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+
+colorflag='--color=auto'
+
+alias l="ls -lFh ${colorflag}"
+alias ll="ls -lAFh ${colorflag}"
+alias ldot='ls -ld .*' # list dot files
+alias ld="ls -lFh ${colorflag} | grep --color=never '^d'" # list directories
+alias ls="command ls ${colorflag}" # always use color output for `ls`
+
+alias du='du -d 1 -h' # nice du output
+alias fd='find . -type d -name'
+alias ff='find . -type f -name'
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias vim='vim'
+alias vi='vim'
+
+
+USER='vnp614'
+alias tux7='ssh ${USE}R@tux7.usask.ca'
+alias tux8='ssh ${USER}@tux8.usask.ca'
+alias tux6='ssh ${USER}@tux6.usask.ca'
+alias tux5='ssh ${USER}@tux5.usask.ca'
+alias trux='ssh ${USER}@trux.usask.ca'
+alias skorpio='ssh ${USER}@skorpio.usask.ca'
+alias kepler1='ssh ${USER}@kepler1.usask.ca'
+alias kepler2='ssh ${USER}@kepler2.usask.ca'
+
+# some functions to make life easier (maybe..)
+
+# # ex - archive extractor
+# # usage: ex <file>
+ex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.tar.xz)    tar xJf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1     ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+# gitpush - add, commit, pull and push
+# usage: gitpush <message>
+gitpush() {
+    git add .
+    git commit -m "$*"
+    git pull
+    git push
+}
+
+alias gpush='gitpush()'
+alias gpull='git pull'
+alias gcom='git commit'
