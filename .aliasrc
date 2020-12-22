@@ -12,7 +12,7 @@ alias ldot='ls -ld .*' # list dot files
 alias ld="ls -lFh ${colorflag} | grep --color=never '^d'" # list directories
 alias ls="command ls ${colorflag}" # always use color output for `ls`
 
-alias du='du -d 1 -h' # nice du output
+alias dud='du -d 1 -h' # nice du output
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
 

@@ -1,0 +1,10 @@
+[Unit]
+Description=SageMath Jupyter Server
+
+[Service]
+ExecStart=/usr/bin/sage --notebook jupyter --NotebookApp.token='' --NotebookApp.password=''
+WorkingDirectory=/home/patel/
+Restart=always
+User=patel
+[Install]
+WantedBy=default.target
