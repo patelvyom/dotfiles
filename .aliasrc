@@ -24,15 +24,15 @@ alias vim='vim'
 alias vi='vim'
 
 
-USER='vnp614'
-alias tux7='ssh ${USER}@tux7.usask.ca'
-alias tux8='ssh ${USER}@tux8.usask.ca'
-alias tux6='ssh ${USER}@tux6.usask.ca'
-alias tux5='ssh ${USER}@tux5.usask.ca'
-alias trux='ssh ${USER}@trux.usask.ca'
-alias skorpio='ssh ${USER}@skorpio.usask.ca'
-alias kepler1='ssh ${USER}@kepler1.usask.ca'
-alias kepler2='ssh ${USER}@kepler2.usask.ca'
+user='vnp614'
+alias tux7='ssh ${user}@tux7.usask.ca'
+alias tux8='ssh ${user}@tux8.usask.ca'
+alias tux6='ssh ${user}@tux6.usask.ca'
+alias tux5='ssh ${user}@tux5.usask.ca'
+alias trux='ssh ${user}@trux.usask.ca'
+alias skorpio='ssh ${user}@skorpio.usask.ca'
+alias kepler1='ssh ${user}@kepler1.usask.ca'
+alias kepler2='ssh ${user}@kepler2.usask.ca'
 
 # some functions to make life easier (maybe..)
 
