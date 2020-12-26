@@ -33,7 +33,7 @@ apts=(curl exfat-utils file git htop nmap tmux vim vlc tilix
 	fonts-firacode fonts-noto default-jdk tlp tlp-rdw
        	gnome-tweak-tool ttf-mscorefonts-installer fonts-powerline
 	snapd cmake python3-pip python3-venv tree wget octave 
-	r-base build-essential ffmpeg)
+	r-base build-essential ffmpeg neofetch qbittorrent)
 
 snaps=(obs-studio spotify mailspring)
 
@@ -51,7 +51,7 @@ while true; do
     case $yn in
         [Yy]* ) install texlive-full; break;;
         [Nn]* ) break;;
-        * ) echo "Please answer yes or no.";;
+        * ) echo "Please answer Yy or Nn";;
     esac
 done
 
