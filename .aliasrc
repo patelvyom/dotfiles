@@ -4,7 +4,8 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
 alias less='less -R'
-
+alias update='sudo apt update -y'
+alias upgrade='sudo apt upgrade -y'
 colorflag='--color=auto'
 
 alias l="ls -lFh ${colorflag}"

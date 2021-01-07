@@ -10,6 +10,7 @@ function install_adobe {
 	sudo apt-get install gdebi-core
 	wget ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i386linux_enu.deb
 	sudo gdebi Adbe*.deb
+	rm -rf Abde*.deb
 	else
 		echo "Already Installed."
 	fi
