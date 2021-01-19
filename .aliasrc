@@ -6,8 +6,9 @@ alias grep='grep --color=auto'
 alias less='less -R'
 alias update='sudo apt update -y'
 alias upgrade='sudo apt upgrade -y'
-colorflag='--color=auto'
+alias install='sudo apt install -y'
 
+colorflag='--color=auto'
 alias l="ls -lFh ${colorflag}"
 alias ll="ls -lAFh ${colorflag}"
 alias ldot='ls -ld .*' # list dot files
