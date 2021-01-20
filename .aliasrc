@@ -7,6 +7,7 @@ alias less='less -R'
 alias update='sudo apt update -y'
 alias upgrade='sudo apt upgrade -y'
 alias install='sudo apt install -y'
+alias c='xclip -selection clipboard'
 
 colorflag='--color=auto'
 alias l="ls -lFh ${colorflag}"
