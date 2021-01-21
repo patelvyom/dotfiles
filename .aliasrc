@@ -8,6 +8,7 @@ alias update='sudo apt update -y'
 alias upgrade='sudo apt upgrade -y'
 alias install='sudo apt install -y'
 alias c='xclip -selection clipboard'
+alias mkdir='mkdir -p'
 
 colorflag='--color=auto'
 alias l="ls -lFh ${colorflag}"
@@ -23,7 +24,6 @@ alias ff='find . -type f -name'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias vim='vim'
 alias vi='vim'
 
 
@@ -36,6 +36,11 @@ alias trux='ssh ${user}@trux.usask.ca'
 alias skorpio='ssh ${user}@skorpio.usask.ca'
 alias kepler1='ssh ${user}@kepler1.usask.ca'
 alias kepler2='ssh ${user}@kepler2.usask.ca'
+alias bbry='ssh ${user}@blueberry.usask.ca'
+alias kbean='ssh ${user}@kidneybean.usask.ca'
+alias sbry='ssh ${user}@saskatoonberry.usask.ca'
+alias hskp='ssh ${user}@haskap.usask.ca'
+alias cabg='ssh ${user}@cabbage.usask.ca'
 
 # some functions to make life easier (maybe..)
 
@@ -73,6 +78,6 @@ gitpush() {
     git push
 }
 
-alias gpush='gitpush()'
+alias gpush='git push'
 alias gpull='git pull'
 alias gcom='git commit'
