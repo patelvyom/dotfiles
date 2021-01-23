@@ -41,7 +41,7 @@ alias kbean='ssh ${user}@kidneybean.usask.ca'
 alias sbry='ssh ${user}@saskatoonberry.usask.ca'
 alias hskp='ssh ${user}@haskap.usask.ca'
 alias cabg='ssh ${user}@cabbage.usask.ca'
-
+alias beet='ssh ${user}@beet.usask.ca'
 # some functions to make life easier (maybe..)
 
 # # ex - archive extractor
