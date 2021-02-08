@@ -9,6 +9,7 @@ alias upgrade='sudo apt upgrade -y'
 alias install='sudo apt install -y'
 alias c='xclip -selection clipboard'
 alias mkdir='mkdir -p'
+alias claer='clear'			# typos
 
 colorflag='--color=auto'
 alias l="ls -lFh ${colorflag}"
@@ -42,6 +43,7 @@ alias sbry='ssh ${user}@saskatoonberry.usask.ca'
 alias hskp='ssh ${user}@haskap.usask.ca'
 alias cabg='ssh ${user}@cabbage.usask.ca'
 alias beet='ssh ${user}@beet.usask.ca'
+
 # some functions to make life easier (maybe..)
 
 # # ex - archive extractor
@@ -81,3 +83,4 @@ gitpush() {
 alias gpush='git push'
 alias gpull='git pull'
 alias gcom='git commit'
+alias gadd='git add .'
