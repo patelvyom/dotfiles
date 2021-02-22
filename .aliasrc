@@ -84,3 +84,16 @@ alias gpush='git push'
 alias gpull='git pull'
 alias gcom='git commit'
 alias gadd='git add .'
+
+# R 4.0 for remote machines
+[[ $(hostname) == "trux" ]] ||
+ [[ $(hostname) == "saskatoonberry" ]] ||
+ [[ $(hostname) == "haskap" ]] ||
+ [[ $(hostname) == "blueberry" ]] ||
+ [[ $(hostname) == "cabbage" ]] ||
+ [[ $(hostname) == "beet" ]] ||
+ [[ $(hostname) == "kidneybean" ]] ||
+ [[ $(hostname) == "laksa" ]] && {
+  alias R='/usr/local/R-4.0.2/bin/R'
+  alias Rscript='/usr/local/R-4.0.2/bin/Rscript'
+  }

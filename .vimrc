@@ -21,3 +21,9 @@ set backspace=indent,eol,start
 
 set path+=**
 
+" Use clipboard as default register
+if system('uname -s') == "Darwin\n"
+  set clipboard=unnamed "OSX
+else
+  set clipboard=unnamedplus "Linux
+endif
