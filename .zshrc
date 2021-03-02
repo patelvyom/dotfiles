@@ -1,3 +1,8 @@
+# If the 3 lines below cause error, try: 'ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh'
+# https://github.com/gnunn1/tilix/wiki/VTE-Configuration-Issue
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
 export TERM="xterm-256color" # This sets up colors properly
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
