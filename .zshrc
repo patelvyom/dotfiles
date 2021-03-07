@@ -9,12 +9,12 @@ export TERM="xterm-256color" # This sets up colors properly
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+ source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # Lines configured by zsh-newuser-install
 ZSH_THEME="powerlevel10k/powerlevel10k"
-
+#ZSH_THEME='dracula'
 # Custom Variables
 EDITOR=vim
 
