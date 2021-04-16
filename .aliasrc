@@ -16,7 +16,7 @@ alias l="ls -lFh ${colorflag}"
 alias ll="ls -lAFh ${colorflag}"
 alias ldot='ls -ld .*' # list dot files
 alias ld="ls -lFh ${colorflag} | grep --color=never '^d'" # list directories
-alias ls="command ls ${colorflag}" # always use color output for `ls`
+alias ls="ls ${colorflag}" # always use color output for `ls`
 
 alias dud='du -d1 -h | sort -h' # nice sorted du output
 alias fd='find . -type d -name'
@@ -27,14 +27,13 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias vi='vim'
 
-
 user='vnp614'
 alias tux7='ssh ${user}@tux7.usask.ca'
 alias tux8='ssh ${user}@tux8.usask.ca'
 alias tux6='ssh ${user}@tux6.usask.ca'
 alias tux5='ssh ${user}@tux5.usask.ca'
 alias trux='ssh ${user}@trux.usask.ca'
-alias skorpio='ssh ${user}@skorpio.usask.ca'
+alias skrp='ssh ${user}@skorpio.usask.ca'
 alias kepler1='ssh ${user}@kepler1.usask.ca'
 alias kepler2='ssh ${user}@kepler2.usask.ca'
 alias bbry='ssh ${user}@blueberry.usask.ca'
@@ -83,7 +82,7 @@ gitpush() {
 alias gpush='git push'
 alias gpull='git pull'
 alias gcom='git commit'
-alias gadd='git add .'
+alias gadd='git add'
 alias gstat='git status'
 alias gdiff='git diff'
 
