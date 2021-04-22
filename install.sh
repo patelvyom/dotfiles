@@ -28,15 +28,14 @@ function snap_install {
 
 # Programs from default apt repo
 
-apts=(curl exfat-utils file git htop nmap tmux vim vlc tilix 
+apts=(curl exfat-utils file git htop nmap tmux vim-gtk vlc tilix 
 	texstudio gimp jpegoptim optipng 
 	fonts-firacode fonts-noto default-jdk tlp tlp-rdw
        	gnome-tweak-tool ttf-mscorefonts-installer fonts-powerline
 	snapd cmake python3-pip python3-venv tree wget octave 
-	r-base build-essential ffmpeg neofetch qbittorrent xclip nomacs flameshot)
+	r-base build-essential ffmpeg neofetch qbittorrent xclip nomacs flameshot ncdu)
 
-snaps=(obs-studio spotify mailspring)
-
+snaps=(obs-studio spotify mailspring okular mathpix-snipping-tool)
 
 echo "Starting...\n"
 for program in "${apts[@]}"
@@ -74,7 +73,5 @@ for f in programs/*.sh; do bash "$f" -H; done
 # Get all upgrades
 sudo apt upgrade -y
 sudo apt autoremove -y
-
-
 
 echo "\nDone!\n"

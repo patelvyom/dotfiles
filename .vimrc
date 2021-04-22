@@ -1,3 +1,19 @@
+set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'itchyny/lightline.vim'
@@ -5,14 +21,17 @@ Plug 'lervag/vimtex'
 
 call plug#end()
 
-set nocompatible
-filetype plugin on
 
 packadd! dracula
 syntax enable
 colorscheme dracula
-
 set background=dark
+set t_Co=256 " 256 colors in terminal
+
+if has('gui_gnome')
+  set guifont=Ubuntu\ Mono\ 8.4
+endif
+
 set number relativenumber
 set noswapfile
 filetype plugin indent on
@@ -20,6 +39,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set softtabstop=4
+let &colorcolumn='80,120'
 
 set autoindent
 set smartindent
@@ -32,7 +52,7 @@ set history=10000
 set encoding=utf-8
 set linebreak
 set backspace=indent,eol,start
-
+set nofoldenable
 set path+=**
 
 " Use clipboard as default register
@@ -44,4 +64,17 @@ endif
 
 set complete+=kspell
 "set completeopt+=menuone,longest
-set spell spelllang=en_us
+
+
+" For Latex
+let g:tex_flavor = "latex"
+let g:vimtex_view_general_viewer="okular"
+noremap <Leader>b :VimtexCompile    <CR>
+
+" Grammar Check
+syntax spell toplevel
+syn sync maxlines=2000
+syn sync minlines=500
+setlocal spell spelllang=en_us
+hi clear SpellBad
+hi SpellBad cterm=underline
