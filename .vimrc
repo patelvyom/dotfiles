@@ -43,7 +43,7 @@ let &colorcolumn='80,120'
 
 set autoindent
 set smartindent
-set nowrap
+set wrap
 set incsearch
 set hlsearch
 set ignorecase

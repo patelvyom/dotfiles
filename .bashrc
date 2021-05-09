@@ -130,4 +130,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
+export DJANGO_ROOT="/home/patel/_data/"

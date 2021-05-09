@@ -7,6 +7,7 @@ alias less='less -R'
 alias update='sudo apt update -y'
 alias upgrade='sudo apt upgrade -y'
 alias install='sudo apt install -y'
+alias remove_ppa='sudo add-apt-repository --remove'
 alias c='xclip -selection clipboard'
 alias mkdir='mkdir -p'
 alias claer='clear'			# typos
@@ -42,6 +43,10 @@ alias sbry='ssh ${user}@saskatoonberry.usask.ca'
 alias hskp='ssh ${user}@haskap.usask.ca'
 alias cabg='ssh ${user}@cabbage.usask.ca'
 alias beet='ssh ${user}@beet.usask.ca'
+alias oats='ssh ${user}@oats.usask.ca'
+alias beans='ssh ${user}@beans.usask.ca'
+alias barley='ssh ${user}@barley.usask.ca'
+alias peas='ssh ${user}@peas.usask.ca'
 
 # some functions to make life easier (maybe..)
 
