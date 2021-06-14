@@ -19,11 +19,13 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 EDITOR=vim
 
 # History vars:
+setopt APPEND_HISTORY INC_APPEND_HISTORY
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.histfile
 
-setopt appendhistory autocd beep extendedglob nomatch notify
+setopt appendhistory autocd beep extendedglob notify 
+unsetopt NOMATCH
 bindkey -e
 
 # End of lines configured by zsh-newuser-install
