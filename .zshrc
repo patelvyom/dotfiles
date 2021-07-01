@@ -4,10 +4,11 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
 export TERM="xterm-256color" # This sets up colors properly
-
+export SHELL=/usr/bin/zsh
 export ZSH="/home/patel/.oh-my-zsh"
 export ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 ZSH_THEME="powerlevel10k/powerlevel10k"
+POWERLEVEL9K_MODE='awesome-fontconfig'
 #ZSH_THEME="dracula"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -58,4 +59,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-

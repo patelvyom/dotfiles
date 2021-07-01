@@ -18,13 +18,14 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'itchyny/lightline.vim'
 Plug 'lervag/vimtex'
-
+Plug 'tomasiser/vim-code-dark'
 call plug#end()
 
 
 packadd! dracula
 syntax enable
-colorscheme dracula
+colorscheme codedark
+"colorscheme dracula
 set background=dark
 set t_Co=256 " 256 colors in terminal
 
@@ -34,6 +35,7 @@ endif
 
 set number relativenumber
 set noswapfile
+set laststatus=2
 filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
@@ -54,6 +56,17 @@ set linebreak
 set backspace=indent,eol,start
 set nofoldenable
 set path+=**
+
+" Try to prevent bad habits like using the arrow keys for movement. This is
+" not the only possible bad habit. For example, holding down the h/j/k/l keys
+" for movement, rather than using more efficient movement commands, is also a
+" bad habit. The former is enforceable through a .vimrc, while we don't know
+" how to prevent the latter.
+" Do this in normal mode...
+nnoremap <Left>  :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up>    :echoe "Use k"<CR>
+nnoremap <Down>  :echoe "Use j"<CR>
 
 " Use clipboard as default register
 if system('uname -s') == "Darwin\n"
