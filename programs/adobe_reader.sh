@@ -3,7 +3,7 @@
 function install_adobe {
 	which acroread &> /dev/null
 
-	if [ $? -ne 0]; then
+	if [ $? -ne 0 ]; then
 	echo "Installing acrobat"
 	sudo apt update
 	sudo apt install -y libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386
@@ -20,7 +20,7 @@ while true;
 do
 	read -p "Do you wish to install Adobe-Reader 9.x?" yn
 	case $yn in
-	[Yy]* ) install_abode; break;;
+	[Yy]* ) install_adobe; break;;
 	[Nn]* ) break;;
 	* ) echo "Please answer Yy or Nn.";;
 	esac
