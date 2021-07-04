@@ -28,13 +28,10 @@ function snap_install {
 
 # Programs from default apt repo
 
-apts=(curl exfat-utils file git htop nmap tmux vim-gtk vlc tilix 
-	texstudio gimp jpegoptim optipng 
-	fonts-firacode fonts-noto default-jdk tlp tlp-rdw
-       	gnome-tweak-tool ttf-mscorefonts-installer fonts-powerline
-	snapd cmake python3-pip python3-venv tree wget octave 
-i	r-base build-essential ffmpeg neofetch qbittorrent xclip nomacs flameshot ncdu 
-visidata)
+apts=(curl exfat-utils file git htop nmap tmux vim-gtk vlc tilix texstudio gimp jpegoptim optipng 
+	fonts-firacode fonts-noto default-jdk tlp tlp-rdw gnome-tweak-tool ttf-mscorefonts-installer fonts-powerline
+	snapd cmake python3-pip python3-venv tree wget octave r-base build-essential ffmpeg neofetch qbittorrent xclip
+    nomacs flameshot ncdu visidata remmina)
 
 snaps=(obs-studio spotify mailspring okular mathpix-snipping-tool)
 
