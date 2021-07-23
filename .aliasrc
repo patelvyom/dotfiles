@@ -12,6 +12,7 @@ alias c='xclip -selection clipboard'
 alias mkdir='mkdir -p'
 alias claer='clear'			# typos
 alias sshgen='ssh-keygen -o -a 100 -t ed25519'
+alias open='xdg-open'
 
 colorflag='--color=auto'
 alias l="ls -lFh ${colorflag}"
