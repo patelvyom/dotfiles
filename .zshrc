@@ -5,7 +5,7 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 fi
 export TERM="xterm-256color" # This sets up colors properly
 export SHELL=/usr/bin/zsh
-export ZSH="/home/patel/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE='awesome-fontconfig'
@@ -39,21 +39,9 @@ plugins=(zsh-autosuggestions git autojump zsh-syntax-highlighting) #zsh-syntax-h
 source $ZSH/oh-my-zsh.sh
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.aliasrc" ] && source "$HOME/.aliasrc"
-
+[ -f "$HOME/.bash.command-not-found" ] && source "$HOME/.bash.command-not-found"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/patel/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/patel/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/patel/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/patel/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+export PATH="$HOME/miniconda3/bin:$PATH"
