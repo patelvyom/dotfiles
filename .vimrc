@@ -46,7 +46,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set softtabstop=4
-let &colorcolumn='80,120'
+let &colorcolumn='120'
 
 set autoindent
 set smartindent

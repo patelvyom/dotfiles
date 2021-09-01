@@ -45,3 +45,4 @@ source $ZSH/oh-my-zsh.sh
 
 # >>> conda initialize >>>
 export PATH="$HOME/miniconda3/bin:$PATH"
+[ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ] && source "$HOME/miniconda3/etc/profile.d/conda.sh"
