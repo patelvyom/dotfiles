@@ -1,0 +1,31 @@
+Host saskatoonberry blueberry haskap beet cabbage kidneybean
+    HostName %h.usask.ca
+    User vnp614
+
+
+Host skorpio trux tux5 tux6 tux7 tux8 kepler1 kepler2
+  HostName %h.usask.ca
+  User vnp614
+
+Host oats peas barley beans
+  HostName %h.usask.ca
+  User vnp614
+
+Host handel bononcini tweedledee tweedledum simsam
+    HostName 75.45.199.77
+    User vyom
+    
+Host handel
+    Port 8059
+
+Host bononcini
+    Port 8060
+
+Host tweedledee
+    Port 8056
+
+Host simsam
+    Port 8058
+
+Host tweedledum
+    Port 8057

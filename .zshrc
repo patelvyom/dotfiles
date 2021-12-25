@@ -44,5 +44,5 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # >>> conda initialize >>>
-export PATH="$HOME/miniconda3/bin:$PATH"
+#export PATH="$HOME/miniconda3/bin:$PATH"
 [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ] && source "$HOME/miniconda3/etc/profile.d/conda.sh"
