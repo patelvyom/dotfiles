@@ -107,3 +107,6 @@ alias gdiff='git diff'
   alias R='/usr/local/R-4.0.2/bin/R'
   alias Rscript='/usr/local/R-4.0.2/bin/Rscript'
   }
+
+# Found this online. Can come in really handy
+alias tmux_ls=$'tmux ls -F "#{session_created} #{session_name}: #{session_windows} windows (created #{t:session_created})#{?session_grouped, (group ,}#{session_group}#{?session_grouped,),}#{?session_attached, (attached),}" | sort -Vr | sed \'s/\S*\s//\''
