@@ -1,0 +1,112 @@
+#!/usr/bin/env bash
+
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias less='less -R'
+alias update='sudo apt update -y'
+alias upgrade='sudo apt upgrade -y'
+alias install='sudo apt install -y'
+alias remove_ppa='sudo add-apt-repository --remove'
+alias c='xclip -selection clipboard'
+alias mkdir='mkdir -p'
+alias claer='clear'			# typos
+alias sshgen='ssh-keygen -o -a 100 -t ed25519'
+alias open='xdg-open'
+
+colorflag='--color=auto'
+alias l="ls -lFh ${colorflag}"
+alias ll="ls -lAFh ${colorflag}"
+alias ldot='ls -ld .*' # list dot files
+alias ld="ls -lFh ${colorflag} | grep --color=never '^d'" # list directories
+alias ls="ls ${colorflag}" # always use color output for `ls`
+
+alias dud='du -d1 -h | sort -h' # nice sorted du output
+alias fd='find . -type d -name'
+alias ff='find . -type f -name'
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias vi='vim'
+
+user='vnp614'
+alias tux7='ssh tux7'
+alias tux8='ssh tux8'
+alias tux6='ssh tux6'
+alias tux5='ssh tux5'
+alias trux='ssh trux'
+alias skrp='ssh skorpio'
+alias kepler1='ssh kepler1'
+alias kepler2='ssh kepler2'
+alias bbry='ssh blueberry'
+alias kbean='ssh kidneybean'
+alias sbry='ssh saskatoonberry'
+alias hskp='ssh haskap'
+alias cabg='ssh cabbage'
+alias beet='ssh beet'
+alias oats='ssh oats'
+alias beans='ssh beans'
+alias barley='ssh barley'
+alias peas='ssh peas'
+alias bono='ssh bononcini'
+alias hand='ssh handel'
+
+# some functions to make life easier (maybe..)
+
+# # ex - archive extractor
+# # usage: ex <file>
+ex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.tar.xz)    tar xJf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1     ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+# gitpush - add, commit, pull and push
+# usage: gitpush <message>
+gitpush() {
+    git add .
+    git commit -m "$*"
+    git pull
+    git push
+}
+
+alias gpush='git push'
+alias gpull='git pull'
+alias gcom='git commit'
+alias gadd='git add'
+alias gstat='git status'
+alias gdiff='git diff'
+
+# R 4.0 for remote machines
+[[ $(hostname) == "trux" ]] ||
+ [[ $(hostname) == "saskatoonberry" ]] ||
+ [[ $(hostname) == "haskap" ]] ||
+ [[ $(hostname) == "blueberry" ]] ||
+ [[ $(hostname) == "cabbage" ]] ||
+ [[ $(hostname) == "beet" ]] ||
+ [[ $(hostname) == "kidneybean" ]] ||
+ [[ $(hostname) == "laksa" ]] && {
+  alias R='/usr/local/R-4.0.2/bin/R'
+  alias Rscript='/usr/local/R-4.0.2/bin/Rscript'
+  }
+
+# Found this online. Can come in really handy
+alias tmux_ls=$'tmux ls -F "#{session_created} #{session_name}: #{session_windows} windows (created #{t:session_created})#{?session_grouped, (group ,}#{session_group}#{?session_grouped,),}#{?session_attached, (attached),}" | sort -Vr | sed \'s/\S*\s//\''

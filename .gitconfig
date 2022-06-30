@@ -1,0 +1,26 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Vyom Patel
+	email = vyom.patel@usask.ca
+
+[status]
+    submodulesummary = 1
+[alias]
+    su = submodule update --remote --merge --recursive --jobs=4
+    graph = log --all --graph --color=always --format=format:"%C(auto)%h%d%x20%s%x20%C(black)%C(bold)%cr%n%C(blue)%x09%an"
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    ld = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph
+    ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+    setupstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+[credential]
+	helper = cache
+[color]
+	ui = true
+[core]
+	compression = 9
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
