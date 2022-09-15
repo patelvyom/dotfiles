@@ -28,7 +28,7 @@ call plug#end()
 
 
 packadd! dracula
-syntax enable
+syntax on
 "colorscheme codedark
 colorscheme dracula
 set background=dark
@@ -38,14 +38,15 @@ if has('gui_gnome')
   set guifont=Ubuntu\ Mono\ 8.4
 endif
 
+filetype plugin indent on
+set hidden
+
 set number relativenumber
 set noswapfile
 set laststatus=2
 filetype plugin indent on
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set softtabstop=4
+set tabstop=4 shiftwidth=4 expandtab list
+
 let &colorcolumn='125'
 
 set autoindent
@@ -93,6 +94,7 @@ noremap <Leader>b :VimtexCompile    <CR>
 syntax spell toplevel
 syn sync maxlines=2000
 syn sync minlines=500
-setlocal spell spelllang=en_us
+"en_gb = British
+setlocal spell spelllang=en_gb
 hi clear SpellBad
 hi SpellBad cterm=underline
