@@ -45,9 +45,10 @@ set number relativenumber
 set noswapfile
 set laststatus=2
 filetype plugin indent on
-set tabstop=4 shiftwidth=4 expandtab list
+set tabstop=4 shiftwidth=4 expandtab
+"set list
 
-let &colorcolumn='125'
+let &colorcolumn='80'
 
 set autoindent
 set smartindent

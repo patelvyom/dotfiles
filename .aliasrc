@@ -88,12 +88,12 @@ gitpush() {
     git push
 }
 
-alias gpush='git push'
-alias gpull='git pull'
+#alias gpush='git push'
+#alias gpull='git pull'
 alias gcom='git commit'
-alias gadd='git add'
-alias gstat='git status'
-alias gdiff='git diff'
+#alias gadd='git add'
+#alias gstat='git status'
+#alias gdiff='git diff'
 
 # R 4.0 for remote machines
 [[ $(hostname) == "trux" ]] ||
