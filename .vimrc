@@ -4,10 +4,6 @@ filetype off
 " set the runtime path to include Vundle and initialize
 "set rtp+=~/.vim/bundle/Vundle.vim
 "call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
 "Plugin 'VundleVim/Vundle.vim'
 "Plugin 'Valloric/YouCompleteMe'
 " All of your Plugins must be added before the following line
@@ -24,13 +20,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'lervag/vimtex'
 Plug 'tomasiser/vim-code-dark'
+Plug 'dracula/vim',{'as':'dracula'}
 call plug#end()
 
-
-packadd! dracula
-syntax on
-"colorscheme codedark
 colorscheme dracula
+filetype plugin indent on
+"colorscheme codedark
+
 set background=dark
 set t_Co=256 " 256 colors in terminal
 
@@ -38,13 +34,10 @@ if has('gui_gnome')
   set guifont=Ubuntu\ Mono\ 8.4
 endif
 
-filetype plugin indent on
 set hidden
-
 set number relativenumber
-set noswapfile
+"set noswapfile
 set laststatus=2
-filetype plugin indent on
 set tabstop=4 shiftwidth=4 expandtab
 "set list
 
@@ -81,7 +74,7 @@ if system('uname -s') == "Darwin\n"
 else
   set clipboard=unnamedplus "Linux
 endif
-
+set paste
 set complete+=kspell
 "set completeopt+=menuone,longest
 
