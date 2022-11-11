@@ -346,7 +346,6 @@ bind C-a send-prefix
 # move status line to top
 #set -g status-position top
 
-
 bind-key -n Home send Escape "OH"
 bind-key -n End send Escape "OF"
 # -- tpm -----------------------------------------------------------------------
