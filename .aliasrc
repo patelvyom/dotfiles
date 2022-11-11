@@ -11,6 +11,7 @@ alias remove_ppa='sudo add-apt-repository --remove'
 alias c='xclip -selection clipboard'
 alias mkdir='mkdir -p'
 alias claer='clear'			# typos
+alias cls='clear'
 alias sshgen='ssh-keygen -o -a 100 -t ed25519'
 alias open='xdg-open'
 
@@ -29,6 +30,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias vi='vim'
+alias v='vim'
 
 user='vnp614'
 alias tux7='ssh tux7'
@@ -108,5 +110,11 @@ alias gcom='git commit'
   alias Rscript='/usr/local/R-4.0.2/bin/Rscript'
   }
 
+if [[ -f "$HOME/ripgrep/target/release/rg" ]]
+then
+    alias rg='$HOME/ripgrep/target/release/rg'
+fi
+
 # Found this online. Can come in really handy
 alias tmux_ls=$'tmux ls -F "#{session_created} #{session_name}: #{session_windows} windows (created #{t:session_created})#{?session_grouped, (group ,}#{session_group}#{?session_grouped,),}#{?session_attached, (attached),}" | sort -Vr | sed \'s/\S*\s//\''
+alias xv6-gdb='/student/cmpt332/riscv/bin/riscv64-unknown-linux-gnu-gdb'
