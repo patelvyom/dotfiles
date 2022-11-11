@@ -20,14 +20,34 @@ call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'lervag/vimtex'
 Plug 'tomasiser/vim-code-dark'
-Plug 'dracula/vim',{'as':'dracula'}
+Plug 'vim-syntastic/syntastic'
+"Plug 'sheerun/vim-polyglot'       "Language pack
+Plug 'preservim/nerdtree'
+Plug 'townk/vim-autoclose'        "Auto close brackets
+Plug 'dracula/vim',{'as':'dracula'} "Dracula theem
+Plug 'preservim/nerdcommenter'
 call plug#end()
 
-colorscheme dracula
-filetype plugin indent on
-"colorscheme codedark
+
+" Nerdtree settings"
+let NERDTreeShowBookmarks = 1   " Show the bookmarks table
+let NERDTreeShowHidden = 1      " Show hidden files
+let NERDTreeShowLineNumbers = 0 " Hide line numbers
+let NERDTreeMinimalMenu = 1     " Use the minimal menu (m)
+let NERDTreeWinPos = "left"     " Panel opens on the left side
+let NERDTreeWinSize = 31        " Set panel width to 31 columns
+nmap <F2> :NERDTreeToggle<CR>
+
+set hlsearch!
+nnoremap <F3> :set hlsearch!<CR>
 
 set background=dark
+colorscheme dracula
+"colorscheme codedark
+
+filetype plugin indent on
+"filetype indent on
+
 set t_Co=256 " 256 colors in terminal
 
 if has('gui_gnome')
@@ -36,18 +56,18 @@ endif
 
 set hidden
 set number relativenumber
-"set noswapfile
+set noswapfile
 set laststatus=2
-set tabstop=4 shiftwidth=4 expandtab
+set tabstop=4 shiftwidth=4 expandtab softtabstop=0 autoindent smarttab
 "set list
 
 let &colorcolumn='80'
 
-set autoindent
+set cursorline
 set smartindent
 set wrap
-set incsearch
-set hlsearch
+set incsearch  " Enable incremental search
+set hlsearch   " Enable highlight search
 set ignorecase
 set smartcase
 set history=10000
@@ -74,7 +94,7 @@ if system('uname -s') == "Darwin\n"
 else
   set clipboard=unnamedplus "Linux
 endif
-set paste
+
 set complete+=kspell
 "set completeopt+=menuone,longest
 
