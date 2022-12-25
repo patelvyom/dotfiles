@@ -61,7 +61,7 @@ set laststatus=2
 set tabstop=4 shiftwidth=4 expandtab softtabstop=0 autoindent smarttab
 "set list
 
-let &colorcolumn='80'
+let &colorcolumn='120'
 
 set cursorline
 set smartindent
