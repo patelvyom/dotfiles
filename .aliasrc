@@ -117,4 +117,28 @@ fi
 
 # Found this online. Can come in really handy
 alias tmux_ls=$'tmux ls -F "#{session_created} #{session_name}: #{session_windows} windows (created #{t:session_created})#{?session_grouped, (group ,}#{session_group}#{?session_grouped,),}#{?session_attached, (attached),}" | sort -Vr | sed \'s/\S*\s//\''
-alias xv6-gdb='/student/cmpt332/riscv/bin/riscv64-unknown-linux-gnu-gdb'
+
+function mkscript () {
+    local file="${1}"
+
+    [ -z "${file}" ] && { echo "Please supply a script name to create"; return 1; }
+    [ -f "${file}" ] && { echo "${file} already exists, aborting"; return 1; }
+
+    mkdir -p "$(dirname "${file}")"
+
+    cat > "${file}" << EOF
+#!/usr/bin/env bash
+
+set -o errexit
+set -o pipefail
+set -o nounset
+
+echo "hello world"
+EOF
+
+    chmod +x "${file}"
+}
+
+weather () {
+    curl "https://wttr.in/${1}"
+}
