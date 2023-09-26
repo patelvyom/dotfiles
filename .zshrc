@@ -7,6 +7,7 @@ export TERM="xterm-256color" # This sets up colors properly
 export SHELL=/usr/bin/zsh
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
+export ZSH_COMPDUMP=$HOME/.oh-my.zsh/cache/.zcompdump-$HOST     # File for speeding up initialisation
 ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE='awesome-fontconfig'
 #ZSH_THEME="dracula"
@@ -35,7 +36,7 @@ ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 COMPLETION_WAITING_DOTS=true
 DISABLE_UNTRACKED_FILES_DIRTY=true
 
-plugins=(zsh-autosuggestions git autojump zsh-syntax-highlighting) #zsh-syntax-highlighting must be last plugin
+plugins=(zsh-autosuggestions git autojump fzf-zsh-plugin zsh-syntax-highlighting sudo) #zsh-syntax-highlighting must be last plugin
 source $ZSH/oh-my-zsh.sh
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.aliasrc" ] && source "$HOME/.aliasrc"
