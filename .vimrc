@@ -24,8 +24,9 @@ Plug 'vim-syntastic/syntastic'
 "Plug 'sheerun/vim-polyglot'       "Language pack
 Plug 'preservim/nerdtree'
 Plug 'townk/vim-autoclose'        "Auto close brackets
-Plug 'dracula/vim',{'as':'dracula'} "Dracula theem
+Plug 'dracula/vim',{'as':'dracula'} "Dracula theme
 Plug 'preservim/nerdcommenter'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiple cursors
 call plug#end()
 
 
@@ -76,6 +77,8 @@ set linebreak
 set backspace=indent,eol,start
 set nofoldenable
 set path+=**
+
+nnoremap <leader>a ggVG
 
 " Try to prevent bad habits like using the arrow keys for movement. This is
 " not the only possible bad habit. For example, holding down the h/j/k/l keys

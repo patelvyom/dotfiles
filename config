@@ -2,6 +2,27 @@ Host saskatoonberry blueberry haskap beet cabbage kidneybean
     HostName %h.usask.ca
     User vnp614
 
+Host copernicus plato
+    HostName %h.usask.ca
+    User vnp614
+
+Host cnic1
+    Hostname cnic-base-lgn-19001
+    User vnp614
+
+Host cnic2
+    Hostname cnic-base-lgn-19002
+    User vnp614
+
+Host quanta1
+    Hostname cnic-quanta-gpu-22001
+    ProxyJump cnic1
+    User vnp614
+
+Host quanta2
+    Hostname cnic-quanta-gpu-22002
+    ProxyJump copernicus
+    User vnp614
 
 Host skorpio trux tux5 tux6 tux7 tux8 kepler1 kepler2
   HostName %h.usask.ca
