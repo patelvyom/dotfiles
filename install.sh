@@ -28,12 +28,12 @@ function snap_install {
 
 # Programs from default apt repo
 
-apts=(curl exfat-utils file git htop nmap tmux vim-gtk vlc tilix texstudio gimp jpegoptim optipng 
-	fonts-firacode fonts-noto default-jdk tlp tlp-rdw gnome-tweak-tool ttf-mscorefonts-installer fonts-powerline
-	snapd cmake python3-pip python3-venv tree wget octave r-base r-cran-devtools build-essential ffmpeg neofetch qbittorrent xclip
-    nomacs flameshot ncdu visidata remmina lm-sensors mediainfo-gui youtube-dl parallel nautilus-admin nvtop)
+apts=(curl exfat-utils file git htop nmap tmux vim-gtk vlc tilix gimp jpegoptim optipng	fonts-firacode fonts-noto
+    ttf-mscorefonts-installer fonts-powerline gnome-tweak-tool snapd cmake python3-pip python3-venv tree wget 
+    r-base r-cran-devtools build-essential ffmpeg qbittorrent xclip nomacs flameshot ncdu visidata remmina lm-sensors
+    mediainfo-gui parallel nautilus-admin nvtop obs-studio okular)
 
-snaps=(obs-studio spotify mailspring okular mathpix-snipping-tool)
+snaps=(mailspring mathpix-snipping-tool)
 
 echo "Starting...\n"
 for program in "${apts[@]}"
