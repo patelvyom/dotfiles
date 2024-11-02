@@ -2,7 +2,7 @@
 [user]
 # Please adapt and uncomment the following lines:
 	name = Vyom Patel
-	email = vyom.patel@usask.ca
+	email = vyom.patel@uwaterloo.ca
 
 [status]
     submodulesummary = 1
@@ -26,3 +26,9 @@
 	required = true
 [credential]
 	helper = cache
+[branch]
+	sort = -committerdate
+[column]
+	ui = auto
+[pager]
+	branch = false
