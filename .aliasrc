@@ -32,34 +32,11 @@ alias mv='mv -i'
 alias vi='vim'
 alias v='vim'
 
-user='vnp614'
-alias tux7='ssh tux7'
-alias tux8='ssh tux8'
-alias tux6='ssh tux6'
-alias tux5='ssh tux5'
-alias trux='ssh trux'
-alias skrp='ssh skorpio'
-alias kepler1='ssh kepler1'
-alias kepler2='ssh kepler2'
-alias bbry='ssh blueberry'
-alias kbean='ssh kidneybean'
-alias sbry='ssh saskatoonberry'
-alias hskp='ssh haskap'
-alias cabg='ssh cabbage'
-alias beet='ssh beet'
-alias oats='ssh oats'
-alias beans='ssh beans'
-alias barley='ssh barley'
-alias peas='ssh peas'
-alias bono='ssh bononcini'
-alias hand='ssh handel'
-
-# some functions to make life easier (maybe..)
+alias gcom='git commit'
 
 # # ex - archive extractor
 # # usage: ex <file>
-ex ()
-{
+ex (){
   if [ -f $1 ] ; then
     case $1 in
       *.tar.bz2)   tar xjf $1   ;;
@@ -81,6 +58,11 @@ ex ()
   fi
 }
 
+mcd(){
+    mkdir -p "$1"
+    cd "$1"
+}
+
 # gitpush - add, commit, pull and push
 # usage: gitpush <message>
 gitpush() {
@@ -90,25 +72,6 @@ gitpush() {
     git push
 }
 
-#alias gpush='git push'
-#alias gpull='git pull'
-alias gcom='git commit'
-#alias gadd='git add'
-#alias gstat='git status'
-#alias gdiff='git diff'
-
-# R 4.0 for remote machines
-[[ $(hostname) == "trux" ]] ||
- [[ $(hostname) == "saskatoonberry" ]] ||
- [[ $(hostname) == "haskap" ]] ||
- [[ $(hostname) == "blueberry" ]] ||
- [[ $(hostname) == "cabbage" ]] ||
- [[ $(hostname) == "beet" ]] ||
- [[ $(hostname) == "kidneybean" ]] ||
- [[ $(hostname) == "laksa" ]] && {
-  alias R='/usr/local/R-4.0.2/bin/R'
-  alias Rscript='/usr/local/R-4.0.2/bin/Rscript'
-  }
 
 if [[ -f "$HOME/ripgrep/target/release/rg" ]]
 then
@@ -142,3 +105,4 @@ EOF
 weather () {
     curl "https://wttr.in/${1}"
 }
+
