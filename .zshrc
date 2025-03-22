@@ -43,7 +43,31 @@ source $ZSH/oh-my-zsh.sh
 [ -f "$HOME/.bash.command-not-found" ] && source "$HOME/.bash.command-not-found"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
+unalias gap
 # >>> conda initialize >>>
 #export PATH="$HOME/miniconda3/bin:$PATH"
 [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ] && source "$HOME/miniconda3/etc/profile.d/conda.sh"
+
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'mamba init' !!
+export MAMBA_EXE='/home/patel/bin/micromamba';
+export MAMBA_ROOT_PREFIX='/home/patel/micromambda';
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__mamba_setup"
+else
+    alias micromamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+fi
+unset __mamba_setup
+# <<< mamba initialize <<<
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/home/patel/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<
+#
+

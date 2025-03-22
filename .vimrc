@@ -21,7 +21,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'lervag/vimtex'
 Plug 'tomasiser/vim-code-dark'
 Plug 'vim-syntastic/syntastic'
-"Plug 'sheerun/vim-polyglot'       "Language pack
+Plug 'sheerun/vim-polyglot'       "Language pack
 Plug 'preservim/nerdtree'
 Plug 'townk/vim-autoclose'        "Auto close brackets
 Plug 'dracula/vim',{'as':'dracula'} "Dracula theme
@@ -63,7 +63,7 @@ set tabstop=4 shiftwidth=4 expandtab softtabstop=0 autoindent smarttab
 "set list
 
 let &colorcolumn='120'
-
+syntax on
 set cursorline
 set smartindent
 set wrap
@@ -77,6 +77,8 @@ set linebreak
 set backspace=indent,eol,start
 set nofoldenable
 set path+=**
+set shortmess+=c
+set shortmess-=S
 
 nnoremap <leader>a ggVG
 
@@ -93,9 +95,9 @@ nnoremap <Down>  :echoe "Use j"<CR>
 
 " Use clipboard as default register
 if system('uname -s') == "Darwin\n"
-  set clipboard=unnamed "OSX
+  set clipboard+=unnamed "OSX
 else
-  set clipboard=unnamedplus "Linux
+  set clipboard+=unnamedplus "Linux
 endif
 
 set complete+=kspell
