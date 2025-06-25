@@ -26,19 +26,23 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+export PATH="/usr/local/texlive/2025/bin/x86_64-linux:$PATH"
+export MANPATH="/usr/bin/local/texlive/2025/texmf-dist/doc/man:$MANPATH"
+export INFOPATH="/usr/bin/local/texlive/2025/texmf-dist/doc/info:$INFOPATH"
+
 # >>> juliaup initialize >>>
 
 # !! Contents within this block are managed by juliaup !!
 
 case ":$PATH:" in
-    *:/home/patel/.juliaup/bin:*)
+    *:/home/xps/.juliaup/bin:*)
         ;;
 
     *)
-        export PATH=/home/patel/.juliaup/bin${PATH:+:${PATH}}
+        export PATH=/home/xps/.juliaup/bin${PATH:+:${PATH}}
         ;;
 esac
 
 # <<< juliaup initialize <<<
-. "$HOME/.cargo/env"
 
+. "$HOME/.cargo/env"
