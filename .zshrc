@@ -1,13 +1,15 @@
-# If the 3 lines below cause error, try: 'ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh'
-# https://github.com/gnunn1/tilix/wiki/VTE-Configuration-Issue
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
-fi
+[[ ! -f ~/.profile ]] || source ~/.profile
+
 export TERM="xterm-256color" # This sets up colors properly
 export SHELL=/usr/bin/zsh
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 export ZSH_COMPDUMP=$HOME/.oh-my.zsh/cache/.zcompdump-$HOST     # File for speeding up initialisation
+export FZF_DEFAULT_COMMAND="rg --files --follow --hidden --glob '!.git'"
+export FZF_DEFAULT_OPTS="--highlight-line --info=inline-right --ansi --layout=reverse --border=none"
+export FZF_CTRL_T_OPTS="--preview='less {}' --height=100% --bind shift-up:preview-page-up,shift-down:preview-page-down"
+export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+
 ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE='awesome-fontconfig'
 #ZSH_THEME="dracula"
@@ -24,34 +26,44 @@ EDITOR=vim
 
 # History vars:
 setopt APPEND_HISTORY INC_APPEND_HISTORY
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=50000
+SAVEHIST=50000
 HISTFILE=~/.histfile
 
-setopt appendhistory autocd beep extendedglob notify 
+setopt appendhistory autocd beep extendedglob notify interactive_comments
 unsetopt NOMATCH
+
+autoload -U colors && colors
 
 DISABLE_MAGIC_FUNCTIONS=true
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 COMPLETION_WAITING_DOTS=true
 DISABLE_UNTRACKED_FILES_DIRTY=true
 
-plugins=(zsh-autosuggestions git autojump fzf-zsh-plugin zsh-syntax-highlighting sudo) #zsh-syntax-highlighting must be last plugin
+plugins=(git sudo autojump fzf-zsh-plugin fzf-tab zsh-autosuggestions zsh-syntax-highlighting)
+#zsh-syntax-highlighting must be last plugin
+
+# Use modern completion system. Other than enabling globdots for showing
+# hidden files, these ares values in the default generated zsh config.
+autoload -U compinit
+compinit
+_comp_options+=(globdots)
+
+# Ensure colors match by using FZF_DEFAULT_OPTS.
+zstyle ":fzf-tab:*" use-fzf-default-opts yes
+# Preview file contents when tab completing directories.
+zstyle ":fzf-tab:complete:cd:*" fzf-preview "ls --color=always \${realpath}"
+
 source $ZSH/oh-my-zsh.sh
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.aliasrc" ] && source "$HOME/.aliasrc"
 [ -f "$HOME/.bash.command-not-found" ] && source "$HOME/.bash.command-not-found"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-unalias gap
-# >>> conda initialize >>>
-#export PATH="$HOME/miniconda3/bin:$PATH"
-[ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ] && source "$HOME/miniconda3/etc/profile.d/conda.sh"
 
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'mamba init' !!
-export MAMBA_EXE='/home/patel/bin/micromamba';
-export MAMBA_ROOT_PREFIX='/home/patel/micromambda';
+export MAMBA_EXE='/home/xps/.local/bin/micromamba';
 __mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__mamba_setup"
@@ -65,7 +77,7 @@ unset __mamba_setup
 
 # !! Contents within this block are managed by juliaup !!
 
-path=('/home/patel/.juliaup/bin' $path)
+path=('/home/xps/.juliaup/bin' $path)
 export PATH
 
 # <<< juliaup initialize <<<
