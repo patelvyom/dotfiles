@@ -1,0 +1,146 @@
+{
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.cursorStyle": "block",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.explorerKind": "external",
+    "terminal.integrated.defaultProfile.linux": "/usr/bin/zsh (migrated)",
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.rightClickBehavior": "paste",
+    "terminal.integrated.profiles.linux": {
+        "/usr/bin/zsh (migrated)": {
+            "path": "/usr/bin/zsh",
+            "args": []
+        }
+    },
+    "editor.rulers": [
+        100,
+        120
+    ],
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "Cascadia Mono",
+    "editor.fontSize": 15,
+    "editor.formatOnSave": true,
+    "editor.mouseWheelZoom": true,
+    "editor.largeFileOptimizations": false,
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.inlineSuggest.enabled": true,
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4,
+    "files.eol": "\n",
+    "files.autoSave": "afterDelay",
+    "workbench.colorTheme": "Dracula Theme",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.sideBar.location": "right",
+    "workbench.editor.focusRecentEditorAfterClose": false,
+    "settingsSync.ignoredSettings": [],
+    "window.openFilesInNewWindow": "default",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook",
+        "*.pdf": "latex-workshop-pdf-hook"
+    },
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.intellisense.bibtexJSON.replace": {},
+    "latex-workshop.bibtex-format.tab": "4 spaces",
+    "latex-workshop.formatting.latex": "latexindent",
+    "[latex]": {
+        "editor.formatOnPaste": false,
+        "editor.suggestSelection": "recentlyUsedByPrefix",
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "James-Yu.latex-workshop"
+    },
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.autoClean.run": "onSucceeded",
+    "jupyter.jupyterServerType": "local",
+    "vim.vimrc.enable": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        },
+        "diffEditor.ignoreTrimWhitespace": true,
+        "linting.ruffEnabled": true
+    },
+    "python.linting.enabled": true,
+    "python.linting.ruffEnabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.enabledWithoutWorkspace": true,
+    "ruff.interpreter": "/home/xps/micromamba/envs/blkenc/bin/python",
+    "ruff.nativeServer": "on",
+    "notebook.formatOnSave.enabled": true,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.statusBar.enabled": false,
+    "gitlens.blame.avatars": false,
+    "gitlens.currentLine.pullRequests.enabled": false,
+    "gitlens.hovers.enabled": false,
+    "gitlens.views.commits.showBranchComparison": false,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false,
+        "yaml": false,
+        "length": 500
+    },
+    "notebook.lineNumbers": "on",
+    "notebook.output.textLineLimit": 120,
+    "explorer.confirmDelete": false,
+    "files.associations": {
+        "*.tcc": "c",
+        "random": "c",
+        "functional": "c",
+        "streambuf": "c",
+        "limits": "cpp",
+        "tuple": "c",
+        "string_view": "c",
+        "*.rmd": "markdown"
+    },
+    "jupyter.askForKernelRestart": false,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.colorCustomizations": {},
+    "vim.useSystemClipboard": true,
+    "git.openRepositoryInParentFolders": "never",
+    "workbench.editor.empty.hint": "hidden",
+    "launch": {
+        "configurations": [],
+        "compounds": []
+    },
+    "extensions.ignoreRecommendations": true,
+    "vim.vimrc.path": "$HOME/.vimrc",
+    "terminal.integrated.commandsToSkipShell": [
+        "github.copilot.terminal.suggestCommand",
+        "language-julia.interrupt"
+    ],
+    "julia.symbolCacheDownload": true,
+    "julia.enableCrashReporter": false,
+    "julia.enableTelemetry": false,
+    "julia.executablePath": "/home/patel/.juliaup/bin/julia",
+    "julia.NumThreads": 6,
+    "editor.minimap.enabled": false,
+    "redhat.telemetry.enabled": true,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "[julia]": {
+        "editor.detectIndentation": false,
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true,
+        "files.trimTrailingWhitespace": true,
+        "files.eol": "\n"
+    },
+    "github.copilot.editor.enableAutoCompletions": true,
+    "markdown-preview-enhanced.previewTheme": "github-light.css",
+    "terminal.integrated.inheritEnv": false,
+    "ltex.language": "en-GB",
+    "cSpell.language": "en-GB",
+    "latex-workshop.latex.build.forceRecipeUsage": false,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "cursor.cpp.enablePartialAccepts": true,
+    "cursor.cpp.disabledLanguages": [
+        "scminput",
+        "yaml"
+    ]
+}
