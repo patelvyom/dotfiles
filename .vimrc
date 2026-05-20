@@ -27,6 +27,8 @@ Plug 'townk/vim-autoclose'        "Auto close brackets
 Plug 'dracula/vim',{'as':'dracula'} "Dracula theme
 Plug 'preservim/nerdcommenter'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiple cursors
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 call plug#end()
 
 
